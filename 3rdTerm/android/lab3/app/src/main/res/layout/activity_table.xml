@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TableActivity"
+    android:stretchColumns="1">
+
+    <TableRow>
+        <TextView
+            android:id="@+id/billAmountLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:padding="10dp"
+            android:text="@string/bill_amount_label"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/billAmountEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:inputType="numberDecimal"
+            android:text="@string/bill_amount"
+            android:layout_column="2">
+            <requestFocus />
+        </EditText>
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/percentLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:padding="10dp"
+            android:text="@string/tip_percent_label"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/percentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/tip_percent"
+            android:textSize="20sp"
+            android:layout_column="2"/>
+
+        <Button
+            android:id="@+id/percentDownButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/decrease"
+            android:layout_column="3"/>
+
+        <Button
+            android:id="@+id/percentUpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/increase"
+            android:layout_column="4"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/tipLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:text="@string/tip_amount_label"
+            android:layout_column="1"/>
+
+        <TextView
+            android:id="@+id/tipTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/tip_amount"
+            android:layout_column="2"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/totalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:text="@string/total_amount_label"
+            android:layout_column="1"/>
+
+        <TextView
+            android:id="@+id/totalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/total_amount"
+            android:layout_column="2"/>
+    </TableRow>
+
+</TableLayout>

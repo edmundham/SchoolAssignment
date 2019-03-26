@@ -1,0 +1,8 @@
+<resources>
+    <string name="appName">lab2</string>
+    <string name="changeColor">Change Color</string>
+    <string name="speak">Speak</string>
+    <string name="apiVersion">API Version</string>
+    <string name="serialNumber">Serial Number</string>
+    <string name="goBack">Back</string>
+</resources>

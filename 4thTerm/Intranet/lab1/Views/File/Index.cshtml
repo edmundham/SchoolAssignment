@@ -1,0 +1,13 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "File Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <ul>
+        @foreach (var file in Model) {
+            <li>@Html.ActionLink(file, "Content", null, new {id = file})</li>
+        }
+    </ul>
+</div>

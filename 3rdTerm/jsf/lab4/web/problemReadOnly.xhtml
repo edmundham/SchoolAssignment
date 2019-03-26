@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+    <title>#{msgs.headerTitle}</title>
+</h:head>
+<h:body>
+    <h:form>
+        <table>
+            <tr>
+                <td rowspan="2"><p>#{problemReport.documentTitle}</p></td>
+                <td>#{msgs.number}</td>
+                <td><h:inputText readonly="true" size="10" value="#{problemReport.number}"></h:inputText></td>
+            </tr>
+            <tr>
+                <td>#{msgs.dateOfIssue}</td>
+                <td><h:inputText readonly="true" size="20" value="#{problemReport.date}"></h:inputText></td>
+            </tr>
+            <tr>
+                <td>#{msgs.project}<h:inputText readonly="true" size="40" value="#{problemReport.project.name}"></h:inputText></td>
+                <td colspan="2">#{msgs.originator}<h:inputText readonly="true" value="#{problemReport.originator}"></h:inputText></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>#{msgs.title}</td>
+                <td><h:inputText size="85" readonly="true" value="#{problemReport.project.title}"></h:inputText></td>
+            </tr>
+            <tr>
+                <td>#{msgs.modulesAffected}</td>
+                <td><h:inputText size="85" readonly="true" value="#{problemReport.modules}"></h:inputText></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>#{msgs.description}<br></br><h:inputTextarea rows="8" cols="90" readonly="true" value="#{problemReport.description}"></h:inputTextarea></td>
+            </tr>
+            <tr>
+                <td>#{msgs.recommendedSolution}<br></br><h:inputTextarea rows="8" cols="90" readonly="true" value="#{problemReport.solution}"></h:inputTextarea></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>#{msgs.priority}<h:inputText size="10" readonly="true" value="#{problemReport.priorityStatus}"></h:inputText></td>
+                <td>#{msgs.security}<h:inputText size="10" readonly="true"  value="#{problemReport.securityStatus}"></h:inputText></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>#{msgs.dateAssigned}<h:inputText size="25" readonly="true" value="#{problemReport.assignedDate}"></h:inputText></td>
+                <td>#{msgs.dateFixed}<h:inputText size="25" readonly="true" value="#{problemReport.fixedDate}"></h:inputText></td>
+            </tr>
+        </table>
+        <h:commandLink value="Edit" action="#{problemReport.edit}"></h:commandLink>
+        <a href="./enterProblem.xhtml">New Problem</a>
+    </h:form>
+</h:body>
+</html>

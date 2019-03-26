@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#index.xhtml" PATH="/index.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#index.xhtml:0" NAME="item"
+   PATH="/index.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="admin::#landing.xhtml" NAME="output"
+    PATH="/landing.xhtml" TARGET="rules:#landing.xhtml" TITLE="admin" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="success::#landing.xhtml" NAME="output1"
+    PATH="/landing.xhtml" TARGET="rules:#landing.xhtml" TITLE="success" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#admin.xhtml" PATH="/admin.xhtml"
+  SHAPE="240,33,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#admin.xhtml:0" NAME="item"
+   PATH="/admin.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="edit::#editPassword.xhtml" NAME="output"
+    PATH="/editPassword.xhtml" TARGET="rules:#editPassword.xhtml"
+    TITLE="edit" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#editPassword.xhtml"
+  PATH="/editPassword.xhtml" SHAPE="448,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#editPassword.xhtml:0" NAME="item"
+   PATH="/editPassword.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="adminSuccess::#admin.xhtml" NAME="output"
+    PATH="/admin.xhtml" TARGET="rules:#admin.xhtml" TITLE="adminSuccess" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="userSuccess::#index.xhtml" NAME="output1"
+    PATH="/index.xhtml" TARGET="rules:#index.xhtml" TITLE="userSuccess" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#landing.xhtml" PATH="/landing.xhtml"
+  SHAPE="240,177,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:*" PATH="*" SHAPE="48,161,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:*:0" NAME="item" PATH="*" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="logoutSuccess::#index.xhtml" NAME="output"
+    PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="logoutSuccess" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#currentTimesheet.xhtml"
+  PATH="/currentTimesheet.xhtml" SHAPE="32,273,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#currentTimesheet.xhtml:0" NAME="item"
+   PATH="/currentTimesheet.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="fail::#currentTimesheet.xhtml" NAME="output"
+    PATH="/currentTimesheet.xhtml"
+    TARGET="rules:#currentTimesheet.xhtml" TITLE="fail" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>

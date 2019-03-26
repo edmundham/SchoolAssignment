@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<h:body>
+        <h:form>
+            <h:panelGrid columns="2">
+                #{msgs.customerId}
+                <h:inputText pt:placeholder="#{msgs.customerIdPlaceHolder}" value="#{application.customerId}" required="true"/>
+                #{msgs.firstName}
+                <h:inputText value="#{application.firstName}"/>
+                #{msgs.lastName}
+                <h:inputText value="#{application.lastName}"/>
+                #{msgs.middleName}
+                <h:inputText value="#{application.middleName}"/>
+                #{msgs.firstAddress}
+                <h:inputText value="#{application.firstAddress}"/>
+                #{msgs.secondAddress}
+                <h:inputText value="#{application.secondAddress}"/>
+                #{msgs.city}
+                <h:inputText value="#{application.city}"/>
+                #{msgs.state}
+                <h:inputText value="#{application.state}"/>
+                #{msgs.zipCode}
+                <h:inputText value="#{application.zipCode}"/>
+                #{msgs.phone}
+                <h:inputText value="#{application.phone}"/>
+                #{msgs.email}
+                <h:inputText value="#{application.email}"/>
+            </h:panelGrid>
+            <h:commandButton value="#{msgs.submit}" action="#{application.submit}"/>
+        </h:form>
+    </h:body>
+</html>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lab1</string>
+    <string name="enterText">Enter Text:</string>
+    <string name="reverseText">Reverse Text</string>
+</resources>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:util="http://java.sun.com/jsf/composite/util">
+
+	<h:head>
+    
+    </h:head>
+    
+    <h:body>
+        <util:address 
+        country="#{address.country}" 
+        countryPrompt="#{msgs.countryPrompt}"
+        countries="#{address.countries}"
+        stateOrProvincePrompt="#{msgs.stateOrProvincePrompt}"
+        stateOrProvince="#{address.stateOrProvince}"
+        statesOrProvinces="#{address.statesOrProvinces}"
+        street="#{address.street}"
+        streetPrompt="#{msgs.streetPrompt}"
+        postalCode="#{address.postalCode}"
+        postalCodePrompt="#{msgs.postalCodePrompt}"
+        city="#{address.city}"
+        cityPrompt="#{msgs.cityPrompt}"
+        saveButtonText="#{msgs.saveButtonText}"
+        saveAction="#{address.save()}"
+        countryChanged="#{address.countryChanged}"
+        />
+    </h:body>
+</html>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:head>
+        <title>Software Problem Report</title>
+    </h:head>
+    <h:body>
+        <h2>Software Problem Report</h2>
+        <h:form>
+            <table>
+                <tr>
+                    <td>#{msgs.number}</td>
+                    <td><h:inputText readonly="true" value="#{problemReport.number}"></h:inputText></td>
+                </tr>
+                <tr>
+                    <td>#{msgs.dateOfIssue}</td>
+                    <td><h:inputText readonly="true" value="#{problemReport.date}"></h:inputText></td>
+                </tr>
+                <tr>
+                    <td>#{msgs.project}</td>
+                    <td><h:inputText readonly="true" value="#{problemReport.project.name}"></h:inputText></td>
+                </tr>
+                <tr>
+                    <td>#{msgs.originator}</td>
+                    <td><h:inputText readonly="true" value="#{problemReport.originator}"></h:inputText></td>
+                </tr>
+                <tr>
+                    <td>#{msgs.title}</td>
+                    <td><h:inputText readonly="true" value="#{problemReport.project.title}"></h:inputText></td>
+                </tr>
+                <tr>
+                    <td>#{msgs.modulesAffected}</td>
+                    <td><h:inputText readonly="true" value="#{problemReport.modules}"></h:inputText></td>
+                </tr>
+                <tr>
+                    <td>#{msgs.description}</td>
+                    <td><h:inputText readonly="true" value="#{problemReport.description}"></h:inputText></td>
+                </tr>
+                <tr>
+                    <td>#{msgs.recommendedSolution}</td>
+                    <td><h:inputText readonly="true" value="#{problemReport.solution}"></h:inputText></td>
+                </tr>
+                <tr>
+                    <td>#{msgs.priority}</td>
+                    <td><h:inputText readonly="true" value="#{problemReport.priority}"></h:inputText></td>
+                </tr>
+                <tr>
+                    <td>#{msgs.security}</td>
+                    <td><h:inputText readonly="true" value="#{problemReport.security}"></h:inputText></td>
+                </tr>
+                <tr>
+                    <td>#{msgs.dateAssigned}</td>
+                    <td><h:inputText readonly="true" value="#{problemReport.assignedDate}"></h:inputText></td>
+                </tr>
+                <tr>
+                    <td>#{msgs.dateFixed}</td>
+                    <td><h:inputText readonly="true" value="#{problemReport.fixedDate}"></h:inputText></td>
+                </tr>
+            </table>
+        </h:form>
+        <a href="./enterProblem.xhtml">go back</a>
+    </h:body>
+</html>

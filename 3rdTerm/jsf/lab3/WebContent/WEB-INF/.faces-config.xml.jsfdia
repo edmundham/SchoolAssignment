@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#index.xhtml" PATH="/index.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#index.xhtml:0" NAME="item"
+   PATH="/index.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="correct::#correct.xhtml" NAME="output"
+    PATH="/correct.xhtml" TARGET="rules:#correct.xhtml" TITLE="correct" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="low::#low.xhtml" NAME="output1"
+    PATH="/low.xhtml" TARGET="rules:#low.xhtml" TITLE="low" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="high::#high.xhtml" NAME="output2"
+    PATH="/high.xhtml" TARGET="rules:#high.xhtml" TITLE="high" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="noChange::#index.xhtml" NAME="output3"
+    PATH="/index.xhtml" TARGET="rules:#index.xhtml" TITLE="noChange" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#correct.xhtml" PATH="/correct.xhtml"
+  SHAPE="272,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#low.xhtml" PATH="/low.xhtml"
+  SHAPE="272,209,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#low.xhtml:0" NAME="item" PATH="/low.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="correct::#correct.xhtml" NAME="output"
+    PATH="/correct.xhtml" TARGET="rules:#correct.xhtml" TITLE="correct" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="low::#low.xhtml" NAME="output1"
+    PATH="/low.xhtml" TARGET="rules:#low.xhtml" TITLE="low" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="high::#high.xhtml" NAME="output2"
+    PATH="/high.xhtml" TARGET="rules:#high.xhtml" TITLE="high" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="noChange::#low.xhtml" NAME="output3"
+    PATH="/low.xhtml" TARGET="rules:#low.xhtml" TITLE="noChange" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#high.xhtml" PATH="/high.xhtml"
+  SHAPE="272,321,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#high.xhtml:0" NAME="item" PATH="/high.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="correct::#correct.xhtml" NAME="output"
+    PATH="/correct.xhtml" TARGET="rules:#correct.xhtml" TITLE="correct" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="low::#low.xhtml" NAME="output1"
+    PATH="/low.xhtml" TARGET="rules:#low.xhtml" TITLE="low" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="high::#high.xhtml" NAME="output2"
+    PATH="/high.xhtml" TARGET="rules:#high.xhtml" TITLE="high" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="noChange::#high.xhtml" NAME="output3"
+    PATH="/high.xhtml" TARGET="rules:#high.xhtml" TITLE="noChange" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>

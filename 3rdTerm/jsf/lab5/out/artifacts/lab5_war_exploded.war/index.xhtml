@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+   <h:body>
+       <ui:composition template="/templates/layout.xhtml">
+           <ui:define name="content">
+               <h:form>
+                   <h:dataTable value="#{data.customerList}" var="d">
+                       <h:column>
+                           <f:facet name="header">#{msgs.edit}</f:facet>
+                           <h:commandButton value="#{msgs.edit}" action="#{data.editButton(d)}"/>
+                       </h:column>
+                       <h:column>
+                           <f:facet name="header">#{msgs.customerId}</f:facet>
+                           #{d.customerId}
+                       </h:column>
+                       <h:column>
+                           <f:facet name="header">#{msgs.firstName}</f:facet>
+                           #{d.firstName}
+                       </h:column>
+                       <h:column>
+                           <f:facet name="header">#{msgs.lastName}</f:facet>
+                           #{d.lastName}
+                       </h:column>
+                       <h:column>
+                           <f:facet name="header">#{msgs.middleName}</f:facet>
+                           #{d.middleName}
+                       </h:column>
+                       <h:column>
+                           <f:facet name="header">#{msgs.firstAddress}</f:facet>
+                           #{d.firstAddress}
+                       </h:column>
+                       <h:column>
+                           <f:facet name="header">#{msgs.secondAddress}</f:facet>
+                           #{d.secondAddress}
+                       </h:column>
+                       <h:column>
+                           <f:facet name="header">#{msgs.city}</f:facet>
+                           #{d.city}
+                       </h:column>
+                       <h:column>
+                           <f:facet name="header">#{msgs.state}</f:facet>
+                           #{d.state}
+                       </h:column>
+                       <h:column>
+                           <f:facet name="header">#{msgs.zipCode}</f:facet>
+                           #{d.zipCode}
+                       </h:column>
+                       <h:column>
+                           <f:facet name="header">#{msgs.phone}</f:facet>
+                           #{d.phone}
+                       </h:column>
+                       <h:column>
+                           <f:facet name="header">#{msgs.email}</f:facet>
+                           #{d.email}
+                       </h:column>
+                   </h:dataTable>
+               </h:form>
+           </ui:define>
+       </ui:composition>
+   </h:body>
+</html>

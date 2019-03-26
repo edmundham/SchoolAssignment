@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ham_Tang</string>
+    <string name="county_details_label">Country Details</string>
+    <string name="county_name_label">Name: </string>
+    <string name="county_capital_label">Capital: </string>
+    <string name="country_region_label">Region: </string>
+    <string name="country_population_label">Population: </string>
+    <string name="county_area_label">Area: </string>
+    <string name="county_borders_label">Borders: </string>
+</resources>

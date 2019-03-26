@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <h3>Auth Request</h3>
+        <button id="btnGetPatients">Get Patients</button>
+        <pre id="preOutput"></pre>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(function () {
+                var getPatients = function () {
+                    var url = "https://localhost:5001/api/patients/";
+                    $.get(url).always(showResponse);
+                    return false;
+                };
+                var showResponse = function (object) {
+                    $("#preOutput").text(JSON.stringify(object, null, 4));
+                };
+                $("#btnGetPatients").click(getPatients);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-CodeFirstStuff-1693AC5D-F45D-40F7-8312-BD5823088B67</UserSecretsId>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\NhlContext.cs" />
+    <Compile Remove="Data\Migrations\20190121232138_PlayersAndTeam.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190121232138_PlayersAndTeam.cs" />
+    <Compile Remove="Controllers\PlayerController.cs" />
+    <Compile Remove="Controllers\TeamController.cs" />
+    <Compile Remove="Data\Migrations\20190122023943_CitiesAndProvinces.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190122023943_CitiesAndProvinces.cs" />
+    <Compile Remove="Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs" />
+    <Compile Remove="Data\Migrations\00000000000000_CreateIdentitySchema.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+word*definition
+bottle*water bottle
+dog*not a cat
+cat*not a dog
+computer*windows or mac
+smart phone*android or ios
+bcit*british columnbia instittue of technology
+ubc*university of british columnbia
+sfu*simon fraser university
+mouse keyboard*expensive mouse and keyboard
+something*new
+pikachu*a pokemon

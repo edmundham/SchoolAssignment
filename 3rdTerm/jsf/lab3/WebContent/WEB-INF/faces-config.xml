@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>correct</from-outcome>
+            <to-view-id>/correct.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>low</from-outcome>
+            <to-view-id>/low.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>high</from-outcome>
+            <to-view-id>/high.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>noChange</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/low.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>correct</from-outcome>
+            <to-view-id>/correct.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>low</from-outcome>
+            <to-view-id>/low.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>high</from-outcome>
+            <to-view-id>/high.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>noChange</from-outcome>
+            <to-view-id>/low.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/high.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>correct</from-outcome>
+            <to-view-id>/correct.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>low</from-outcome>
+            <to-view-id>/low.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>high</from-outcome>
+            <to-view-id>/high.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>noChange</from-outcome>
+            <to-view-id>/high.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+</faces-config>

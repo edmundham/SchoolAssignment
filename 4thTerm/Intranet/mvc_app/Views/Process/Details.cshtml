@@ -1,0 +1,9 @@
+@model System.Diagnostics.Process
+@{
+    ViewData["Title"] = "Concrete Processes";
+}
+
+<h1>@ViewData["Title"]</h1>
+<p><b>Process ID: </b>@Model.Id</p>
+<p><b>Process Name: </b>@Model.ProcessName</p>
+<p><b>Handles: </b>@Model.HandleCount</p>

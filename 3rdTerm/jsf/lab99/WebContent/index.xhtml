@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:body>
+        <h1>Supplier</h1>
+        <h:form>
+            <p:inputText value="#{supplierListForm.searchQuery}"/>
+            <p:commandButton value="search" action="#{supplierListForm.search}"></p:commandButton>
+        </h:form>
+        <h:form>
+            <p:dataTable value="#{supplierListForm.list}" var="s">
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="edit" style="font-weight: bold" />
+                    </f:facet>
+                    <f:facet name="footer">
+                        <h:commandButton value="Add" action="#{supplierListForm.add}"/>
+                    </f:facet>
+                    <h:selectBooleanCheckbox value="#{s.editable}" onclick="submit()" />
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="supplier id"
+                                      style="font-weight: bold" />
+                    </f:facet>
+                    <f:facet name="footer">
+                        <p:inputText value="#{supplierListForm.toBeAddedSupplier.supplierId}"/>
+                    </f:facet>
+                    <h:outputText value="#{s.supplier.supplierId}" />
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="supplier name"
+                                      style="font-weight: bold" />
+                    </f:facet>
+                    <f:facet name="footer">
+                        <p:inputText value="#{supplierListForm.toBeAddedSupplier.supplierName}"/>
+                    </f:facet>
+                    <p:inputText value="#{s.supplier.supplierName}" rendered="#{s.editable}"
+                                 size="10" />
+                    <h:outputText value="#{s.supplier.supplierName}" rendered="#{not s.editable}" />
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="supplier contact name"
+                                      style="font-weight: bold" />
+                    </f:facet>
+                    <f:facet name="footer">
+                        <p:inputText value="#{supplierListForm.toBeAddedSupplier.contactName}"/>
+                    </f:facet>
+                    <p:inputText value="#{s.supplier.contactName}"
+                                 rendered="#{s.editable}" size="10" />
+                    <h:outputText value="#{s.supplier.contactName}"
+                                  rendered="#{not s.editable}" />
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="supplier contact title"
+                                      style="font-weight: bold" />
+                    </f:facet>
+                    <f:facet name="footer">
+                        <p:inputText value="#{supplierListForm.toBeAddedSupplier.contactTitle}"/>
+                    </f:facet>
+                    <p:inputText value="#{s.supplier.contactTitle}" rendered="#{s.editable}"
+                                 size="10" />
+                    <h:outputText value="#{s.supplier.contactTitle}"
+                                  rendered="#{not s.editable}" />
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="supplier address"
+                                      style="font-weight: bold" />
+                    </f:facet>
+                    <f:facet name="footer">
+                        <p:inputText value="#{supplierListForm.toBeAddedSupplier.address}"/>
+                    </f:facet>
+                    <p:inputText value="#{s.supplier.address}"
+                                 rendered="#{s.editable}" size="10" />
+                    <h:outputText value="#{s.supplier.address}"
+                                  rendered="#{not s.editable}" />
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="supplier city"
+                                      style="font-weight: bold" />
+                    </f:facet>
+                    <f:facet name="footer">
+                        <p:inputText value="#{supplierListForm.toBeAddedSupplier.city}"/>
+                    </f:facet>
+                    <p:inputText value="#{s.supplier.city}"
+                                 rendered="#{s.editable}" size="10" />
+                    <h:outputText value="#{s.supplier.city}"
+                                  rendered="#{not s.editable}" />
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="supplier postal code"
+                                      style="font-weight: bold" />
+                    </f:facet>
+                    <f:facet name="footer">
+                        <p:inputText value="#{supplierListForm.toBeAddedSupplier.postalCode}"/>
+                    </f:facet>
+                    <p:inputText value="#{s.supplier.postalCode}" rendered="#{s.editable}"
+                                 size="10" />
+                    <h:outputText value="#{s.supplier.postalCode}"
+                                  rendered="#{not s.editable}" />
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="state or province"
+                                      style="font-weight: bold" />
+                    </f:facet>
+                    <f:facet name="footer">
+                        <p:inputText value="#{supplierListForm.toBeAddedSupplier.stateOrProvince}"/>
+                    </f:facet>
+                    <p:inputText value="#{s.supplier.stateOrProvince}" rendered="#{s.editable}"
+                                 size="10" />
+                    <h:outputText value="#{s.supplier.stateOrProvince}"
+                                  rendered="#{not s.editable}" />
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="country"
+                                      style="font-weight: bold" />
+                    </f:facet>
+                    <f:facet name="footer">
+                        <p:inputText value="#{supplierListForm.toBeAddedSupplier.country}"/>
+                    </f:facet>
+                    <p:inputText value="#{s.supplier.country}" rendered="#{s.editable}"
+                                 size="10" />
+                    <h:outputText value="#{s.supplier.country}"
+                                  rendered="#{not s.editable}" />
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="supplier phone number"
+                                      style="font-weight: bold" />
+                    </f:facet>
+                    <f:facet name="footer">
+                        <p:inputText value="#{supplierListForm.toBeAddedSupplier.phoneNumber}"/>
+                    </f:facet>
+                    <p:inputText value="#{s.supplier.phoneNumber}" rendered="#{s.editable}"
+                                 size="10" />
+                    <h:outputText value="#{s.supplier.phoneNumber}"
+                                  rendered="#{not s.editable}" />
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="supplier fax number"
+                                      style="font-weight: bold" />
+                    </f:facet>
+                    <f:facet name="footer">
+                        <p:inputText value="#{supplierListForm.toBeAddedSupplier.faxNumber}"/>
+                    </f:facet>
+                    <p:inputText value="#{s.supplier.faxNumber}" rendered="#{s.editable}"
+                                 size="10" />
+                    <h:outputText value="#{s.supplier.faxNumber}"
+                                  rendered="#{not s.editable}" />
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="payment terms"
+                                      style="font-weight: bold" />
+                    </f:facet>
+                    <f:facet name="footer">
+                        <p:inputText value="#{supplierListForm.toBeAddedSupplier.paymentTerms}"/>
+                    </f:facet>
+                    <p:inputText value="#{s.supplier.paymentTerms}" rendered="#{s.editable}"
+                                 size="10" />
+                    <h:outputText value="#{s.supplier.paymentTerms}"
+                                  rendered="#{not s.editable}" />
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="email address"
+                                      style="font-weight: bold" />
+                    </f:facet>
+                    <f:facet name="footer">
+                        <p:inputText value="#{supplierListForm.toBeAddedSupplier.emailAddress}"/>
+                    </f:facet>
+                    <p:inputText value="#{s.supplier.emailAddress}" rendered="#{s.editable}"
+                                 size="10" />
+                    <h:outputText value="#{s.supplier.emailAddress}"
+                                  rendered="#{not s.editable}" />
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="notes"
+                                      style="font-weight: bold" />
+                    </f:facet>
+                    <f:facet name="footer">
+                        <p:inputText value="#{supplierListForm.toBeAddedSupplier.notes}"/>
+                    </f:facet>
+                    <p:inputText value="#{s.supplier.notes}" rendered="#{s.editable}"
+                                 size="10" />
+                    <h:outputText value="#{s.supplier.notes}"
+                                  rendered="#{not s.editable}" />
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="delete"
+                                      style="font-weight: bold" />
+                    </f:facet>
+                    <h:commandButton value="delete"
+                                     action="#{supplierListForm.deleteRow(s)}" />
+                </p:column>
+            </p:dataTable>
+            <br/>
+            <h:commandButton value="save" action="#{supplierListForm.save}"/>
+        </h:form>
+    </h:body>
+</html>

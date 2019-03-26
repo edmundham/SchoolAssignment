@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      xmlns:p="http://primefaces.org/ui">
+
+	<composite:interface>
+        <composite:editableValueHolder name="countryInput" targets="form:country"/>
+        <composite:editableValueHolder name="stateOrProvinceInput" targets="form:stateOrProvince"/>
+        <composite:editableValueHolder name="streetInput" targets="form:street"/>
+        <composite:editableValueHolder name="postalCodeInput" targets="form:postalCode"/>
+        <composite:editableValueHolder name="cityInput" targets="form:city"/>
+        <composite:actionSource name="saveButton" targets="form:saveButton"/>
+        
+        <composite:attribute name="countryPrompt"/>
+        <composite:attribute name="country"/>
+        <composite:attribute name="countries"/>
+        <composite:attribute name="stateOrProvincePrompt"/>
+        <composite:attribute name="stateOrProvince"/>
+        <composite:attribute name="statesOrProvinces"/>
+        <composite:attribute name="street"/>
+        <composite:attribute name="streetPrompt"/>
+        <composite:attribute name="postalCode"/>
+        <composite:attribute name="postalCodePrompt"/>
+        <composite:attribute name="city"/>
+        <composite:attribute name="cityPrompt"/>
+        <composite:attribute name="saveButtonText"/>
+        <composite:attribute name="countryChanged"/>
+        
+        <composite:attribute name="saveAction" method-signature="java.lang.String save()"/>
+        
+        <composite:facet name="heading"/>
+    </composite:interface>
+    <composite:implementation>
+      <h:form id="form">
+         <composite:renderFacet name="heading"/>
+         <p:panelGrid columns="2">
+            #{cc.attrs.countryPrompt}
+            <p:selectOneMenu value="#{cc.attrs.country}" valueChangeListener="#{address.countryChanged}" onChange="submit()">
+                <f:selectItems value="#{cc.attrs.countries}"/>
+            </p:selectOneMenu>
+
+            #{cc.attrs.stateOrProvincePrompt}
+            <p:selectOneMenu value="#{cc.attrs.stateOrProvince}">
+                <f:selectItems value="#{cc.attrs.statesOrProvinces}"/>
+            </p:selectOneMenu>
+            
+            #{cc.attrs.cityPrompt}
+            <p:inputText value="#{cc.attrs.city}"/>
+            
+            #{cc.attrs.streetPrompt}
+            <p:inputText value="#{cc.attrs.street}"/>
+            
+            #{cc.attrs.postalCodePrompt}
+            <p:inputText value="#{cc.attrs.postalCode}"/>
+         </p:panelGrid>
+         <p>
+               <p:commandButton id="saveButton"
+                  value="#{cc.attrs.saveButtonText}"
+                  action="#{cc.attrs.saveAction}"/>
+            </p>
+      </h:form>
+
+      <p><composite:insertChildren/></p>
+
+   </composite:implementation>
+</html>

@@ -1,0 +1,15 @@
+@model IEnumerable<System.Diagnostics.Process>
+@{
+    ViewData["Title"] = "Concrete";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Concrete</h1>
+    <h2>@ViewData["message"]</h2>
+    <p>This is HomeHome</p>
+    <ul>
+        @foreach( var i in Model) {
+            <li>@Html.ActionLink(i.ProcessName, "Details", null, new {id = i.Id})</li>
+        }
+    </ul>
+</div>
